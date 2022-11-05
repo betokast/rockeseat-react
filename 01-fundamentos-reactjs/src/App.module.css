@@ -1,0 +1,24 @@
+.wrapper{
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: 256px 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+@media (max-width: 768px){
+    html{
+        font-size: 87.5%
+    }
+    /* No mobile, a fonte será diminuída de forma dinâmica, sendo assim, não podemos colocar um valor fixo, mas sim um percentual. Como o rem se refere a 16px, e queremos setar a fonte para 14px, devemos fazer uma regra de três simples:
+    16 -> 100%
+    14 -> x
+    */
+
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+}
